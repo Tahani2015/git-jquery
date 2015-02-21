@@ -1,0 +1,20 @@
+table.u-full-width
+	thead
+		tr
+			th Type
+			th Actor
+			th Created At
+			th Repository
+			th Public
+	tbody
+	each item in items    
+		tr
+			td=item.type
+			td=item.actor.login
+			td=item.created_at
+			td
+				div.twelve.columns
+					a(href=item.repo.url)
+						= item.repo.name
+			td=item.public
+			
