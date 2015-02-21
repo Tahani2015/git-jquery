@@ -10,3 +10,5 @@ Git One Page Client-side App
 
     $ git subtree push --prefix build origin gh-pages
 
+This App is deployed on gh-pages:
+http://tahani2015.github.io/git-jquery/#
