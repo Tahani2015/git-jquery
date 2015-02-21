@@ -9,6 +9,7 @@ function myEvents(){
             var html = jade.render(template, {items: events})            
 
             $("#list").html(html)
+            $("#details").html('')
 
         })
 
