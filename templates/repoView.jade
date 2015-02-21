@@ -1,1 +1,88 @@
-h5= item.full_name
+h4(style='text-align: center')= item.name
+div.container(style='text-align: center;background-color: #add8e6; border: 3px solid #D1D1D1')
+	div#example-grid
+		div.row
+			div.four.columns 
+				b Full_Name :
+			div.twelve.columns
+				=item.full_name
+		div.row
+			div.four.columns
+				b Repo URL  
+			div.twelve.columns
+				a(href=item.html_url)
+					=item.html_url
+		div.row
+			div.four.columns
+				b Owner Name
+			div.eight.columns
+				=item.owner.login
+		div.row
+			div.four.columns
+				b Owner URL
+			div.eight.columns 
+				a(href=item.owner.html_url)
+					=item.owner.html_url
+		div.row
+			div.four.columns
+				b Owner Avatar
+			div.eight.columns 
+				img(src=item.owner.avatar_url width="128" height="128")
+		div.row
+			div.four.columns
+				b Description 
+			div.twelve.columns
+				if (item.description)
+					=item.description
+				else
+					| N/A
+		div.row
+			div.four.columns
+				b Created_At 
+			div.eight.columns
+				=item.created_at
+		div.row
+			div.four.columns
+				b Updated_At  
+			div.eight.columns
+				=item.updated_at
+		div.row
+			div.four.columns
+				b Pushed_At  
+			div.eight.columns
+				=item.pushed_at
+		div.row
+			div.four.columns
+				b Private?  
+			div.eight.columns
+				=item.private
+		div.row
+			div.four.columns
+				b Defult branch  
+			div.eight.columns
+				=item.default_branch
+		div.row
+			div.four.columns
+				b Watchers  
+			div.two.columns(style='color: red')
+				=item.watchers
+			div.four.columns
+				b Forks 
+			div.two.columns(style='color: red')
+				=item.forks
+		div.row
+			div.four.columns
+				b Issues  
+			div.two.columns(style='color: red')
+				=item.open_issues
+			div.four.columns
+				b Size 
+			div.two.columns(style='color: red')
+				=item.size
+		div.row
+			div.four.columns
+				b Clone URL  
+			div.twelve.columns
+				a(href=item.clone_url)
+					=item.clone_url
+	
